@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/tailwind.css">
+    <script src="https://kit.fontawesome.com/98b760bef2.js" crossorigin="anonymous"></script>
+    <script type="module" src="./public/data.js"></script>
+    <script type="module" src="./public/script.js"></script>
+    <script type="module" src="./public/vocabulary.js"></script>
+    <title>Vocabulary Mat</title>
+</head>
+
+<body style="" id="body">
+    <div id="container"
+        class="h-screen bg-gray-500 bg-opacity-50 flex flex-col items-center justify-center overflow-hidden m-0 box-border">
+        <!-- 文字填充部分 -->
+        <div class="flex flex-row items-center justify-center w-screen">
+            <!-- 左按钮 -->
+            <button id="previous" class="mr-4 p-2 bg-white rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+            </button>
+            <!-- 卡片 -->
+            <div id="cards" class="shadow-md rounded-2xl h-[65vh] lg:w-[30vw] w-4/6 overflow-hidden">
+                <div class="flex flex-col h-full justify-center bg-white">
+                    <!-- 第一栏 -->
+                    <div
+                        class="h-[30%] border-solid border-b-2 border-gray-600 bg-black flex flex-col justify-center items-center">
+                        <p id="emoji" class="text-3xl mb-2"> emoji </p>
+                        <p id="word" class="text-white font-bold text-5xl md:text-6xl mb-2"> word
+                        </p>
+                    </div>
+                    <!-- 第二栏 -->
+                    <div class="bg-blue-100 h-[30%] flex justify-center items-center text-center">
+                        <p id="definition" class="text-base md:text-lg m-5 overflow-auto"> definition </p>
+                    </div>
+                    <!-- 第三栏 -->
+                    <div class="bg-blue-200 h-[40%] flex items-center justify-center">
+                        <p id="example" class="text-base  md:text-lg m-5"> example </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 右按钮 -->
+            <button id="next" class="ml-4 p-2 bg-white rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </button>
+        </div>
+        <!-- 下方按钮部分 -->
+        <div class=" mt-5 flex justify-between">
+            <!-- 收藏键 -->
+            <button id="heartBtn" class=" mr-5 bg-white rounded-lg hover:bg-red-400 px-5 py-5 ">
+                <i id="heartIcon" class="far fa-star h-6 w-6 m-auto"></i>
+            </button>
+            <!-- 播放键 -->
+            <button id="soundbtn" class=" ml-5 bg-white px-5 py-5 rounded-lg hover:bg-red-400 ">
+                <audio id="sound" src=""></audio>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
