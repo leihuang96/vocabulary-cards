@@ -1,3 +1,3 @@
-# Vocabulary-Board
+# A set of vocabulary cards
  
-A set of vocabulary cards. 
+
